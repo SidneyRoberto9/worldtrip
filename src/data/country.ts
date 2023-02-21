@@ -1,4 +1,5 @@
 interface CountryData {
+  slug: string;
   bgImg: string;
   title: string;
   subtitle: string;
@@ -9,6 +10,7 @@ interface CountryData {
 
 export const countryData: CountryData[] = [
   {
+    slug: 'north-america',
     bgImg:
       'https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&q=80',
     title: 'América do Norte',
@@ -19,6 +21,7 @@ export const countryData: CountryData[] = [
     languagesSize: 256,
   },
   {
+    slug: 'south-america',
     bgImg:
       'https://images.unsplash.com/photo-1619546952812-520e98064a52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&q=80',
     title: 'América do Sul',
@@ -29,6 +32,7 @@ export const countryData: CountryData[] = [
     languagesSize: 456,
   },
   {
+    slug: 'asia',
     bgImg:
       'https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&q=80',
     title: 'Ásia',
@@ -39,6 +43,7 @@ export const countryData: CountryData[] = [
     languagesSize: 2300,
   },
   {
+    slug: 'africa',
     bgImg:
       'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&q=80',
     title: 'África',
@@ -49,6 +54,7 @@ export const countryData: CountryData[] = [
     languagesSize: 2000,
   },
   {
+    slug: 'europe',
     bgImg:
       'https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&q=80',
     title: 'Europa',
@@ -59,6 +65,7 @@ export const countryData: CountryData[] = [
     languagesSize: 24,
   },
   {
+    slug: 'oceania',
     bgImg:
       'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&q=80',
     title: 'Oceania',
