@@ -22,9 +22,14 @@ export function Carrousel() {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
       >
-        {countryData.map(({ bgImg, subtitle, title }) => (
-          <SwiperSlide key={title}>
-            <CarrouselItem bgImg={bgImg} title={title} description={subtitle} />
+        {countryData.map(({ bgImg, subtitle, title, slug }) => (
+          <SwiperSlide key={slug}>
+            <CarrouselItem
+              bgImg={bgImg}
+              title={title}
+              description={subtitle}
+              slug={slug}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
