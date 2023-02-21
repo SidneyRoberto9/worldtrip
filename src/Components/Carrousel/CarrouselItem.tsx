@@ -1,18 +1,62 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Center, Flex, Heading, Text } from '@chakra-ui/react';
 
-export function CarrouselItem() {
+interface CarrouselItemProps {
+  bgImg: string;
+  title: string;
+  description: string;
+}
+
+export function CarrouselItem({
+  bgImg,
+  title,
+  description,
+}: CarrouselItemProps) {
   return (
-    <Box
-      bgImg={
-        'url(https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&q=80)'
-      }
-      bgPosition={'center'}
-      h={550}
-      maxW={'calc(100vw - 200px)'}
-      bgSize={'cover'}
-      filter={'brightness(0.4)'}
-    >
-      <h1>CarrouselItem</h1>
+    <Box position={'relative'}>
+      <Box
+        bgImg={`url(${bgImg})`}
+        bgPosition={'center'}
+        h={550}
+        maxW={'calc(100vw - 200px)'}
+        bgSize={'cover'}
+        filter={'brightness(0.35)'}
+        position={'relative'}
+      />
+
+      <Center
+        position={'absolute'}
+        zIndex={2}
+        right={'50%'}
+        top={'50%'}
+        transform={'translate(50%, -50%)'}
+      >
+        <Flex
+          align={'center'}
+          justify={'center'}
+          gap={'4'}
+          direction={'column'}
+          margin={'0 auto'}
+          h={550}
+        >
+          <Heading
+            color={'gray.50'}
+            fontSize={'5xl'}
+            fontWeight={'bold'}
+            textAlign={'center'}
+          >
+            {title}
+          </Heading>
+          <Text
+            color={'gray.150'}
+            fontSize={'2xl'}
+            fontWeight={'bold'}
+            textAlign={'center'}
+            lineHeight={'9'}
+          >
+            {description}
+          </Text>
+        </Flex>
+      </Center>
     </Box>
   );
 }
