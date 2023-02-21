@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
 
-export function Banner() {
+export function MainBanner() {
   return (
     <Box bgImg={"url('/BannerImg.svg')"} h={335} bgSize={'cover'}>
       <Flex align={'center'} justify={'space-evenly'} px={'6'}>
